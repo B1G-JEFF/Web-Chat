@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #18191a;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+#box {
+  width: 70vw;
+  height: 80vh;
+  border: 1px solid #c1c1c1;
+  border-radius: 8px;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+#side-bar {
+  width: 25%;
+  height: 100%;
+  border-right: 1px solid #555;
+}
+
+#title {
+  color: #6100ff;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#title-bar {
+  margin: 10px;
+  border-bottom: 1px solid #555;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.room-item {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #6100ff;
+  border-radius: 4px;
+  height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.room-item:hover {
+  background: #5c4294;
+}
+
+.room-text {
+  margin-left: 5px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+#message-area {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+#message-display {
+  margin-top: 4px;
+  width: 100%;
+  height: 95%;
+  overflow: auto;
+}
+
+.commun {
+  min-width: 50px;
+  max-width: 400px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin: 2px;
+  overflow: hidden;
+  display: flex;
+  align-content: center;
+  max-height: 200px; /* Defina o valor máximo de altura conforme necessário */
+  overflow-y: auto; /* Adiciona a barra de rolagem vertical se necessário */
+}
+
+.commun p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  margin: 6px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  word-wrap: break-word; /* Adiciona quebra de palavra */
+}
+
+.left {
+  float: left;
+  border-radius: 0px 10px 10px 10px;
+  background:  #b897ff;
+  margin-left: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.right {
+  float: right;
+  border-radius: 10px 0px 10px 10px;
+  background: #fff;
+  margin-right: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.left,
+.right {
+  clear: both;
+}
+
+#message-input-text {
+  flex: 1;
+  font-size: 16px;
+  padding: 2px;
+  background-color: #18191a;
+  border: 2px solid #555;
+  margin: 1px;
+  border-radius: 2px;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#form {
+  display: flex;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 0px none;
+}
+
+.button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #6100ff;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 3px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  margin: 2px;
+}
+
+.svgIcon {
+  width: 14px;
+  height: 14px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button:hover {
+  width: 80px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: #6100ff;
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.button::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Send";
+  color: white;
+  font-size: 0px;
+}
+
+.button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
